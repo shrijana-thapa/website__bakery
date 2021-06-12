@@ -1,0 +1,145 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+.wrapper{
+    display:grid;
+    grid-template-columns:repeat(3,28.5%) auto;
+    grid-template-rows:100px 410px 700px 100px;
+    grid-template-areas:
+    "header   header   header   header"
+    "section1  section2   section3  leftside"
+    "main     main       main     leftside"
+    "footer   footer    footer     leftside";
+
+
+    height:100vh;
+    font-size:30px;
+
+}
+
+.header{
+    grid-area: header;
+    display:flex;  
+}
+.header__left{
+    padding:10px 0 0 40px;
+    margin-right:40px;
+}
+.header__mid--h1{
+    font-size:50px;
+    font-family:'Times New Roman', Times, serif;
+    font-style:italic;
+    font-weight:lighter;
+    padding-top:10px;
+    margin-bottom:0;
+}
+.header__space{
+flex-grow:2;
+}
+.header__right{
+padding:10px 40px 0px 0px;
+}
+.header__right--button {
+    
+    border:5px solid rgb(235, 129, 147);
+    border-radius: 10px; 
+    padding:7px;
+    background-color: white;
+}
+
+.sectionleft{
+    grid-area:section1;
+}
+.sectionmid{
+    grid-area:section2;
+}
+.sectionright{
+    grid-area:section3;
+}
+figure{
+    border:2px solid grey;
+    border-radius:5px;
+    padding:5px;
+    margin:5px;
+}
+figcaption{
+    text-align:center;
+
+}
+.leftside{
+    grid-area:leftside;
+    background-color: rgb(224, 239, 240);
+    
+}
+.leftside__ul{
+    height:100%;
+    position:fixed;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+}
+.leftside__ul a{
+    color: rgb(223, 100, 121);
+    text-decoration: none;
+}
+.leftside__ul li {
+    list-style-type: none;
+    padding-left:5em;    
+}
+.leftside__ul li a:hover {
+color:rgb(63, 51, 51);
+}
+
+.main{
+    grid-area:main;
+
+    background-image: url('m4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    float:left;
+    padding:10% 0 25% 10%;
+
+    }
+    .main__h1{
+        font-weight:normal;
+        font-style:italic;
+        color:rgb(252, 86, 155);
+        margin:10px 0 15 0;
+    }
+    
+
+    .main__button{
+    border-radius:5px; 
+    padding:10px;
+    height:50px;
+    width:8em;
+    margin:20px 0 15px 0;
+    color:white;
+    background-color:rgb(238, 45, 78);
+    }
+
+.footer{
+    grid-area:footer;
+    background-color: rgb(194, 214, 214);
+}
+.footer__ul{
+    display:flex;
+    justify-content:space-evenly;
+     padding:30px;
+    
+}
+.footer__ul a{
+    color: rgb(223, 100, 121);
+    text-decoration: none;
+}
+
+.footer__ul li {
+    list-style-type: none;
+    font-size:25px; 
+}
+.footer__ul li a:hover {
+color:rgb(63, 51, 51);
+}
+
